@@ -15,6 +15,7 @@
 
 Next, copy the wordpress folder inside and paste it into your servers root folder.
 
+Run Run Run
 - Go to `http://{your-local-domain-here}/wp-admin`
 -
 
