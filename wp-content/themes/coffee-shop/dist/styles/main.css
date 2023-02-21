@@ -1,3 +1,44 @@
+:root{
+    --white: #FBFCF6;
+    --brown: #875C28;
+    --background-color: var(--white);
+}
+
+@font-face{
+    font-family: 'Lemon Milk';
+    src: url("../fonts/lemon/LEMONMILK-Bold.woff2") format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url("../fonts/inter/Inter-Regular.woff2") format("woff2");
+}
+
 *{
-    color: red;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    min-height: 100vh;
+    padding: 0px 60px;
+}
+
+.footer-logo{
+    max-height: 70px;
+}
+
+footer{
+    background-color: var(--brown);
+    color: var(--white);
+    font-family: 'Lemon Milk', sans-serif;
+    padding: 30px 0px;
+    text-align: center;
 }
