@@ -16,7 +16,7 @@
         if ($menu){?>
             <nav class="navbar navbar-expand-lg bg-body-tertiary py-0">
                 <div class="container-fluid navbar-style">
-                    <a class="navbar-brand nav-title" href="">The Coffee House</a>
+                    <a class="navbar-brand nav-title" href="<?php echo home_url(); ?>">The Coffee House</a>
                     <button class="navbar-toggler mobile-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
