@@ -1,12 +1,17 @@
 :root{
     --white: #FBFCF6;
     --brown: #875C28;
+    --green: #A0C04A;
     --background-color: var(--white);
 }
 
 @font-face{
     font-family: 'Lemon Milk';
     src: url("../fonts/lemon/LEMONMILK-Bold.woff2") format('woff2');
+}
+@font-face{
+    font-family: 'Lemon';
+    src: url("../fonts/lemon/Lemon-Regular.woff2") format('woff2');
 }
 @font-face {
     font-family: 'Inter';
@@ -31,14 +36,51 @@ main{
     padding: 0px 60px;
 }
 
-.footer-logo{
-    max-height: 70px;
-}
-
 footer{
     background-color: var(--brown);
     color: var(--white);
-    font-family: 'Lemon Milk', sans-serif;
+    font-family: 'Lemon', sans-serif;
     padding: 30px 0px;
     text-align: center;
+}
+
+.navbar-style{
+    background-color: var(--brown);
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* .navbar-inner-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+
+.nav-title{
+    color: var(--white);
+    font-family: 'Lemon', sans-serif;
+    font-size: 1.5rem;
+}
+.nav-title:hover{
+    color: var(--green);
+}
+.nav-link-style{
+    color: var(--white);
+    font-family: 'Lemon', sans-serif;;
+    font-size: 1.2rem;
+}
+
+.nav-link-style:hover{
+    color: var(--green);
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
