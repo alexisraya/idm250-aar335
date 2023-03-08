@@ -120,12 +120,14 @@ function register_theme_sidebars()
 }
 add_action('widgets_init', 'register_theme_sidebars');
 
+/**
+ * Save ACF fields to JSON in a directory in your theme
+ * @return void
+ */
 function my_acf_json_save_point($path)
 {
-    // update path
     $acf_directory = '/acf';
     $path = get_stylesheet_directory() . $acf_directory;
-    // return
     return $path;
 }
 add_filter('acf/settings/save_json', 'my_acf_json_save_point');
@@ -143,7 +145,6 @@ function my_acf_json_load_point($paths)
     return $paths;
 }
 add_filter('acf/settings/load_json', 'my_acf_json_load_point');
-
 
 function add_acf_options_page()
 {
