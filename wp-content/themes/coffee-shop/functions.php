@@ -89,3 +89,72 @@ function get_theme_menu($menu_name)
     $menu_items = wp_get_nav_menu_items($menu->term_id, ['order' => 'DESC']);
     return $menu_items;
 }
+
+function remove_archive_title_prefix($title)
+{
+    if (is_category()) {
+        $title = single_cat_title('', false);
+    } elseif (is_tag()) {
+        $title = single_tag_title('', false);
+    } elseif (is_author()) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif (is_post_type_archive()) {
+        $title = post_type_archive_title('', false);
+    } elseif (is_tax()) {
+        $title = single_term_title('', false);
+    }
+    return $title;
+}
+
+/**
+ * Register custom sidebars
+ * @link https://developer.wordpress.org/reference/functions/register_sidebar/
+ * @return void
+ */
+function register_theme_sidebars()
+{
+    register_sidebar([
+        'name' => 'Page Sidebar',
+        'id' => 'page-sidebar',
+    ]);
+}
+add_action('widgets_init', 'register_theme_sidebars');
+
+function my_acf_json_save_point($path)
+{
+    // update path
+    $acf_directory = '/acf';
+    $path = get_stylesheet_directory() . $acf_directory;
+    // return
+    return $path;
+}
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+
+function my_acf_json_load_point($paths)
+{
+    // remove original path (optional)
+    unset($paths[0]);
+
+    // append path
+    $acf_directory = '/acf';
+    $paths[] = get_stylesheet_directory() . $acf_directory;
+
+    // return
+    return $paths;
+}
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+
+
+function add_acf_options_page()
+{
+    if (function_exists('acf_add_options_page')) {
+        acf_add_options_page([
+            'page_title' => 'Theme General Settings',
+            'menu_title' => 'Theme Settings',
+            'menu_slug' => 'theme-general-settings',
+            'capability' => 'edit_posts',
+            'redirect' => false,
+        ]);
+    }
+}
+add_action('init', 'add_acf_options_page');
