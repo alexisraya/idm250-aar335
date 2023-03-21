@@ -22,6 +22,29 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lemon', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 2rem
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-size: 1rem;
     line-height: 1.5;
@@ -42,6 +65,10 @@ footer{
     font-family: 'Lemon', sans-serif;
     padding: 30px 0px;
     text-align: center;
+}
+
+img{
+    border-radius: 5px;
 }
 
 .navbar-style{
@@ -83,4 +110,55 @@ footer{
     border: none;
     outline: none;
     box-shadow: none;
+}
+
+.logo-large{
+    width: 150px;
+    height: auto;
+}
+
+.home_hero{
+    color: var(--white);
+    position: relative;
+    text-align: center;
+    padding: 30px 0px 60px 0px;
+}
+
+.home_hero_img{
+    filter: brightness(45%);
+    width: 100%;
+}
+
+.text-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.hero_title{
+    padding: 40px 0px 20px 0px;
+}
+
+.img_side_text_container{
+    display: flex;
+    column-gap: 35px;
+    margin: 0 0 30px 0;
+}
+
+.side_text_container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+@media screen and (max-width: 780px){
+    .logo-large{
+        width: 100px;
+    }
+
+    .hero_title{
+        padding: 20px 0px 10px 0px;
+    }
 }

@@ -1,5 +1,5 @@
 <?php get_header();?>
 
-<h1><?php echo get_the_title(); ?></h1>
-
+<?php include_once('components/home_hero.php');?>
+<?php include('components/img+side_text-right.php');?>
 <?php get_footer();?>

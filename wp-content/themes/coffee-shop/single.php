@@ -17,10 +17,6 @@ foreach ($terms as $term) {
     echo "<p>{$term->name}</p>";
 }
 ?>
-<br>
-<br>
-<br>
-<br>
 
 <?php
     get_footer();
