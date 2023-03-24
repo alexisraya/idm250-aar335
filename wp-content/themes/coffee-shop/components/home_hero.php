@@ -9,7 +9,7 @@
             <?php 
                 $image = get_field('logo', 'option');
                 if( !empty( $image ) ): ?>
-                    <img class="navbar-brand d-inline-block align-text-center logo-large" alt="Logo" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img class="d-inline-block align-text-center logo-large" alt="Logo" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             <?php endif; ?>
         </div>
         <h1 class="hero_title"><?php the_field('hero_title'); ?></h1>

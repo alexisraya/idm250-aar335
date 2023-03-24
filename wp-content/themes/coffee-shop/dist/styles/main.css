@@ -1,9 +1,12 @@
 :root{
+    --black : #1E170F;
     --white: #FBFCF6;
+    --dark-brown: #4e2813;
     --brown: #875C28;
     --green: #A0C04A;
     --rose: #CCA39E;
     --background-color: var(--white);
+    --text-color: var(--black);
 }
 
 @font-face{
@@ -24,21 +27,40 @@
 }
 
 h1, h2, h3, h4, h5, h6{
+    color: var(--text-color);
     font-family: 'Lemon', sans-serif;
     font-weight: 700;
-    margin: 0 0 20px 0;
+    margin: 0;
     padding: 0;
 }
 
 h1{
-    font-size: 2rem
+    font-size: 2rem;
+    margin: 30px 0px 15px 0px;
 }
 
 h2{
+    font-size: 1.75rem;
+    margin: 20px 0px 10px 0px;
+}
+
+h3{
     font-size: 1.5rem;
+    font-weight: 300;
+    margin: 15px 0px 10px 0px;
+}
+
+h5{
+    font-size: 1.125rem;
+}
+
+h4, h5, h6{
+    font-weight: 300;
+    margin: 10px 0px 5px 0px;
 }
 
 p{
+    color: var(--text-color);
     font-family: 'Inter', sans-serif;
     font-size: 1.15rem;
     font-weight: 400;
@@ -46,10 +68,13 @@ p{
     padding: 0;
 }
 
+a{
+    color: var(--rose);
+}
+
 body{
     font-size: 1rem;
     line-height: 1.5;
-    color: #333;
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
@@ -60,16 +85,77 @@ main{
     padding: 0px 60px;
 }
 
+.page_container{
+    padding: 0px 60px;
+}
+
 footer{
     background-color: var(--brown);
     color: var(--white);
     font-family: 'Lemon', sans-serif;
     padding: 30px 0px;
+    margin-top: 60px;
     text-align: center;
 }
 
 img{
     border-radius: 5px;
+    width: 100%;
+}
+
+.wp-block-image{
+    margin: 20px 15px;
+}
+
+.wp-block-image figcaption{
+    color: var(--dark-brown);
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+}
+
+blockquote{
+    border-left: 5px dotted var(--brown);
+    border-bottom: 5px dotted var(--brown);
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    margin: 0;
+    padding: 0 0 15px 20px;
+}
+
+cite{
+    color: var(--dark-brown);
+    font-family: 'Lemon', sans-serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.wp-block-pullquote{
+    margin: 0;
+}
+
+.wp-block-pullquote cite{
+    color: var(--dark-brown);
+}
+
+ol, ul{
+    padding-left: 60px;
+}
+
+li{
+    color: var(--dark-brown);
+    padding: 5px 0;
+}
+
+.wp-block-embed__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
 }
 
 .navbar-style{
@@ -113,6 +199,10 @@ img{
     box-shadow: none;
 }
 
+.navbar-brand{
+    max-width: 60px;
+}
+
 .navbar-color{
     background-color: var(--white);
 }
@@ -122,7 +212,7 @@ img{
     height: auto;
 }
 
-.button{
+.button, .wp-element-button{
     background-color: var(--rose);
     border: 3px solid var(--brown);
     border-radius: 5px;
@@ -130,11 +220,12 @@ img{
     font-family: 'Lemon', 'sans-serif';
     font-size: 1.2rem;
     padding: 10px 20px;
+    margin: 15px 0px;
     text-align: center;
     text-decoration: none;
 }
 
-.button:hover{
+.button:hover, .wp-element-button:hover{
     background-color: var(--brown);
     border-color: var(--rose);
 }
@@ -207,6 +298,7 @@ img{
 }
 
 .footer_text{
+    color: var(--white);
     font-family: 'Lemon', sans-serif;
     padding: 25px 0 0 0;
 }
@@ -223,6 +315,26 @@ img{
 @media screen and (max-width: 780px){
     main{
         padding: 0px 30px;
+    }
+    
+    h2{
+        margin: 30px 0px 20px 0px;
+    }
+    
+    h3{
+        margin: 25px 0px 20px 0px;
+    }
+    
+    h4, h5, h6{
+        margin: 20px 0px 15px 0px;
+    }
+
+    .page_container{
+        padding: 0px 30px;
+    }
+
+    .wp-block-pullquote{
+        padding: 25px 0;
     }
 
     .home_hero_logo{
@@ -267,5 +379,8 @@ img{
     }
     .hero_title{
         padding: 10px 0px;
+    }
+    .page_container{
+        padding: 0px 10px;
     }
 }
