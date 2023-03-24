@@ -8,9 +8,8 @@
     </div>
     <div class="blog_text_container">
         <h1 class='blog_title'><?php echo get_the_title(); ?></h1>
-        <h2 class="side_text_title"><?php the_field('blog_title'); ?></h2>
-        <p class="side_text_title"><?php the_field('blog_description'); ?></p>
-        <h3 class="side_text_title"><?php the_field('origin_name'); ?></h3>
+        <p class="side_text_body"><?php the_field('blog_description'); ?></p>
+        <h2 class="side_text_title"><?php the_field('origin_name'); ?></h2>
         <p class="side_text_body"><?php the_field('origin_description'); ?></p>
     </div>
 </div>
