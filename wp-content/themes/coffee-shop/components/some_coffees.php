@@ -1,13 +1,15 @@
 <?php 
 $coffees =[
     'post_type' => 'coffees',
-    'posts_per_page' => 9,
+    'posts_per_page' => 3,
     'orderby' => 'date',
     'order' => 'ASC'
 ];
 $all_coffees = new WP_Query($coffees);
-
 ?>
+
+<h4 class="side_text_body"><?php the_field('coffee_gallery_title'); ?></h4>
+
 <div>
     <div class="featured-coffees">
         <div class="text-center">

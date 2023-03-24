@@ -50,7 +50,6 @@ add_post_type_support('page', 'excerpt');
 
 function register_custom_post_types()
 {
-    // register shoes post type
     register_post_type(
         'coffees',
         [
