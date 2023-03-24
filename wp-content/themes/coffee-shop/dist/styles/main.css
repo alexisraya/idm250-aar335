@@ -2,6 +2,7 @@
     --white: #FBFCF6;
     --brown: #875C28;
     --green: #A0C04A;
+    --rose: #CCA39E;
     --background-color: var(--white);
 }
 
@@ -112,9 +113,50 @@ img{
     box-shadow: none;
 }
 
+.navbar-color{
+    background-color: var(--white);
+}
+
 .logo-large{
     width: 100px;
     height: auto;
+}
+
+.button{
+    background-color: var(--rose);
+    border: 3px solid var(--brown);
+    border-radius: 5px;
+    color: var(--white);
+    font-family: 'Lemon', 'sans-serif';
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color: var(--brown);
+    border-color: var(--rose);
+}
+
+.container_404{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    width: 100%s;
+}
+
+.title_404{
+    font-size: 4rem;
+    text-align: center;
+
+}
+
+.text_404{
+    font-size: 2rem;
+    text-align: center;
 }
 
 .home_hero{
