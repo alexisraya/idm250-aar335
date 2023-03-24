@@ -215,6 +215,11 @@ img{
     margin: 25px 0px;
 }
 
+.menu_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 @media screen and (max-width: 780px){
     main{
         padding: 0px 30px;
